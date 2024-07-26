@@ -1,0 +1,79 @@
+:root {
+  --header-font : ;
+  --score-font:  ;
+  --text-font: ;
+}
+
+.game{
+  max-width: 100%;
+  max-height: auto;
+  margin: 0 8%;
+  /* border: 1px solid green; */
+}
+
+.upper-app {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+
+}
+
+.upper-app h1 {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.cards {
+  /* border: 1px solid blue; */
+  padding: 3% 0;
+  height: auto;
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+  grid-template: repeat(2, 1fr) / repeat(6, 1fr);
+  gap: 30px;
+  place-items: center;
+}
+
+.instructions {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.instructions p {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+}
+
+.win span {
+  color: green;
+}
+
+@media (max-width: 1600px) {
+  .cards {
+    grid-template: repeat(3, 1fr) / repeat(4, 1fr); ;
+  }
+}
+
+@media (max-width: 1200px) {
+  .cards {
+    grid-template: repeat(4, 1fr) / repeat(3, 1fr); ;
+  }
+}
+
+@media (max-width: 800px) {
+  .cards {
+    grid-template: repeat(6, 1fr) / repeat(2, 1fr); ;
+  }
+}
+
+@media (max-width: 550px) {
+  .cards {
+    grid-template: repeat(12, 1fr) / repeat(1, 1fr); ;
+  }
+}
