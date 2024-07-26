@@ -6,8 +6,10 @@
 
 .game{
   max-width: 100%;
-  max-height: auto;
+  height: 100%;
   margin: 0 8%;
+  display: grid;
+  grid-template-rows: 1fr 4fr 1fr;
   /* border: 1px solid green; */
 }
 
@@ -29,6 +31,7 @@
 .cards {
   /* border: 1px solid blue; */
   padding: 3% 0;
+  min-width: 400px;
   height: auto;
   display: grid;
   /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
@@ -51,29 +54,33 @@
 }
 
 .win span {
-  color: green;
+  color: white;
+  font-weight: bold;
 }
 
 @media (max-width: 1600px) {
   .cards {
-    grid-template: repeat(3, 1fr) / repeat(4, 1fr); ;
+    grid-template: repeat(2, 1fr) / repeat(6, 1fr);
+    padding: 0 20px ;
   }
 }
 
 @media (max-width: 1200px) {
   .cards {
-    grid-template: repeat(4, 1fr) / repeat(3, 1fr); ;
+    grid-template: repeat(3, 1fr) / repeat(4, 1fr); ;
   }
 }
 
 @media (max-width: 800px) {
   .cards {
-    grid-template: repeat(6, 1fr) / repeat(2, 1fr); ;
+    grid-template: repeat(4, 1fr) / repeat(3, 1fr); ;
   }
 }
 
-@media (max-width: 550px) {
-  .cards {
-    grid-template: repeat(12, 1fr) / repeat(1, 1fr); ;
+/* @media (max-width: 550px) {
+
+  .cards{
+   
+    grid-template: repeat(3, 1fr) / repeat(4, 1fr)
   }
-}
+} */
